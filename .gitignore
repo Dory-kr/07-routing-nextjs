@@ -2,4 +2,4 @@ cat > .gitignore <<'EOF'
 node_modules
 .next/
 .env.local
-EOF
+EOFn
