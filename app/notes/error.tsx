@@ -8,7 +8,7 @@ interface ErrorProps {
 const Error = ({ error }: ErrorProps) => {
   return (
     <p>
-      Could not fetch the list of notes. {error.message}
+      Could not fetch note details. {error.message}
     </p>
   );
 };
