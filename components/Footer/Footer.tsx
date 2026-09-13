@@ -7,8 +7,7 @@ const Footer = () => {
     <footer className={css.footer}>
       <div className={css.wrap}>
         <p>
-          © {currentYear} NoteHub. Developer: Daryna. Email:
-          student@notehub.app
+          © {currentYear} NoteHub. Developer: Daryna. Email: student@notehub.app
         </p>
       </div>
     </footer>

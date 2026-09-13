@@ -8,9 +8,7 @@ interface CreateNoteParams {
   tag: NoteTag;
 }
 
-export const createNote = async (
-  note: CreateNoteParams,
-): Promise<Note> => {
+export const createNote = async (note: CreateNoteParams): Promise<Note> => {
   const response = await axiosInstance.post<Note>("/notes", note);
 
   return response.data;

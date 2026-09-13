@@ -71,13 +71,9 @@ const Notes = ({ tag }: NotesProps) => {
 
       {isError && <p>Something went wrong.</p>}
 
-      {!isLoading && !isError && notes.length === 0 && (
-        <p>No notes found.</p>
-      )}
+      {!isLoading && !isError && notes.length === 0 && <p>No notes found.</p>}
 
-      {!isLoading && !isError && notes.length > 0 && (
-        <NoteList notes={notes} />
-      )}
+      {!isLoading && !isError && notes.length > 0 && <NoteList notes={notes} />}
 
       {totalPages > 1 && (
         <Pagination

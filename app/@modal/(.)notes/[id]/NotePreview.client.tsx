@@ -6,13 +6,17 @@ import { useQuery } from "@tanstack/react-query";
 import Modal from "@/components/Modal/Modal";
 import { fetchNoteById } from "@/lib/api/fetchNoteById";
 
-import css from "@/app/notes/NoteDetails.module.css";
+import css from "./NotePreview.module.css";
 
 const NotePreview = () => {
   const { id } = useParams<{ id: string }>();
   const router = useRouter();
 
-  const { data: note, isLoading, isError } = useQuery({
+  const {
+    data: note,
+    isLoading,
+    isError,
+  } = useQuery({
     queryKey: ["note", id],
     queryFn: () => fetchNoteById(id),
     enabled: Boolean(id),

@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  useEffect,
-  type MouseEvent,
-  type ReactNode,
-} from "react";
+import { useEffect, type MouseEvent, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 
 import css from "./Modal.module.css";
@@ -45,11 +41,7 @@ const Modal = ({ children, onClose }: ModalProps) => {
       onClick={handleBackdropClick}
     >
       <div className={css.modal}>
-        <button
-          type="button"
-          aria-label="Close modal"
-          onClick={onClose}
-        >
+        <button type="button" aria-label="Close modal" onClick={onClose}>
           ×
         </button>
 

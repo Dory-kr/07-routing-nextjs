@@ -22,10 +22,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <TanStackProvider>
-         <Header />
-{children}
-{modal}
-<Footer />
+          <Header />
+          {children}
+          {modal}
+          <Footer />
         </TanStackProvider>
       </body>
     </html>

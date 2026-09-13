@@ -16,9 +16,7 @@ interface NotesPageProps {
   }>;
 }
 
-export default async function NotesPage({
-  params,
-}: NotesPageProps) {
+export default async function NotesPage({ params }: NotesPageProps) {
   const { slug } = await params;
 
   const tag = slug[0] === "all" ? undefined : (slug[0] as NoteTag);

@@ -32,10 +32,7 @@ const validationSchema = Yup.object({
     .max(50, "Title must be at most 50 characters")
     .required("Title is required"),
 
-  content: Yup.string().max(
-    500,
-    "Content must be at most 500 characters",
-  ),
+  content: Yup.string().max(500, "Content must be at most 500 characters"),
 
   tag: Yup.string()
     .oneOf(["Todo", "Work", "Personal", "Meeting", "Shopping"])
@@ -81,11 +78,7 @@ const NoteForm = ({ onCancel }: NoteFormProps) => {
             placeholder="Enter note title"
           />
 
-          <ErrorMessage
-            name="title"
-            component="span"
-            className={css.error}
-          />
+          <ErrorMessage name="title" component="span" className={css.error} />
         </div>
 
         <div className={css.formGroup}>
@@ -100,22 +93,13 @@ const NoteForm = ({ onCancel }: NoteFormProps) => {
             rows={6}
           />
 
-          <ErrorMessage
-            name="content"
-            component="span"
-            className={css.error}
-          />
+          <ErrorMessage name="content" component="span" className={css.error} />
         </div>
 
         <div className={css.formGroup}>
           <label htmlFor="tag">Tag</label>
 
-          <Field
-            as="select"
-            id="tag"
-            name="tag"
-            className={css.select}
-          >
+          <Field as="select" id="tag" name="tag" className={css.select}>
             <option value="Todo">Todo</option>
             <option value="Work">Work</option>
             <option value="Personal">Personal</option>
@@ -123,11 +107,7 @@ const NoteForm = ({ onCancel }: NoteFormProps) => {
             <option value="Shopping">Shopping</option>
           </Field>
 
-          <ErrorMessage
-            name="tag"
-            component="span"
-            className={css.error}
-          />
+          <ErrorMessage name="tag" component="span" className={css.error} />
         </div>
 
         <div className={css.actions}>
