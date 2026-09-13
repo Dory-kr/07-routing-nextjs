@@ -20,6 +20,7 @@ const NotePreview = () => {
     queryKey: ["note", id],
     queryFn: () => fetchNoteById(id),
     enabled: Boolean(id),
+    refetchOnMount: false,
   });
 
   const handleClose = () => {
